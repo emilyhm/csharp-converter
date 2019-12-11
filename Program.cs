@@ -6,12 +6,13 @@ namespace very_hard
     {
         static void Main(string[] args)
         {
+            //this condition is what dictates if the while loop should keep going 
             bool condition = true;
 
             //while loop keeps prompting user to convert 
             while (condition == true)
             {
-                //propmts user to enter a number(brought in as a string), which is then parsed into a interger 
+                //prompts user to enter a number(brought in as a string), which is then parsed into a interger 
                 Console.WriteLine("Please insert a number to convert it!");
                 string response = Console.ReadLine();
                 int numChoice = int.Parse(response);
@@ -27,12 +28,14 @@ namespace very_hard
                 Console.WriteLine("P: Convert from pound to kilogram.");
                 Console.WriteLine();
 
-                //the user enters the converstion type, it is set to all upper case and then converted from a string to a char
+                //the user enters the converstion type, it is set to a char and then set to all upper case
                 string convert = Console.ReadLine();
                 char conversionType = char.ToUpper(Convert.ToChar(convert));
 
-                //switch case is used for each conversion type and takes the params 'conversionType', the type 'double' is used so that numbers are allowed to have decimals
+                //the type 'double' is used so that numbers are allowed to have decimals
                 double outcome;
+                
+                //switch case is used for each conversion type and takes the params 'conversionType', 
                 switch(conversionType)
                 {
                     //the number that the user chose is multiplied by the number that converts it to the other unit of measurement, which is displayed to the console along with a thank you message, the condition is changed to false so the while loop will stop, and finally the switch case is broken
